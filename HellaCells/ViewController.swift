@@ -8,18 +8,54 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var numbers = [Int]()
+    func getThatNumber () -> [Int] {
+        for n in 1...100 {
+            numbers.append(n)
+        }
+        return numbers
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.numbers = getThatNumber()
+        print(numbers)
+        
+    }
+    
+   
+    
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(numbers.count)
+        return numbers.count
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "NumberCell", for: indexPath)
+        let number = numbers[indexPath.row]
+        cell.textLabel?.text = String(number)
+        return cell
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowNumber" {
+            let destinationViewController = segue.destination as! HellaMasterTableViewController
+            let selectedNumberIndex = tableView.indexPathForSelectedRow?.row
+            if selectedNumberIndex != nil {
+                destinationViewController.number = self.numbers[selectedNumberIndex!]
+            }
+        }
+    }
+    
+    
 }
 

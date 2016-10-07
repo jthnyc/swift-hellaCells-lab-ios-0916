@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014490C81DA8102F0031131A /* HellaMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014490C71DA8102F0031131A /* HellaMasterTableViewController.swift */; };
 		1B95508A1D59398500BBAE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9550891D59398500BBAE20 /* AppDelegate.swift */; };
 		1B95508C1D59398500BBAE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B95508B1D59398500BBAE20 /* ViewController.swift */; };
 		1B95508F1D59398500BBAE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B95508D1D59398500BBAE20 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014490C71DA8102F0031131A /* HellaMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HellaMasterTableViewController.swift; sourceTree = "<group>"; };
 		1B9550861D59398500BBAE20 /* HellaCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HellaCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9550891D59398500BBAE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B95508B1D59398500BBAE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				1B9550891D59398500BBAE20 /* AppDelegate.swift */,
 				1B95508B1D59398500BBAE20 /* ViewController.swift */,
+				014490C71DA8102F0031131A /* HellaMasterTableViewController.swift */,
 				1B95508D1D59398500BBAE20 /* Main.storyboard */,
 				1B9550901D59398500BBAE20 /* Assets.xcassets */,
 				1B9550921D59398500BBAE20 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014490C81DA8102F0031131A /* HellaMasterTableViewController.swift in Sources */,
 				1B95508C1D59398500BBAE20 /* ViewController.swift in Sources */,
 				1B95508A1D59398500BBAE20 /* AppDelegate.swift in Sources */,
 			);
